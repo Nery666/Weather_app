@@ -57,9 +57,10 @@ project/
 ├── app/
 │   ├── main.py
 │   ├── weather.db
-│   ├── static/             # (необязательно, можно убрать)
+│   ├── static/             
 │   └── templates/
 │       ├── index.html
 │       └── weather.html
 ├── requirements.txt
 └── README.md
+
