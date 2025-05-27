@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+</head>
+<body>
+    <h1>Погода в {{ city }}</h1>
+
+    {% if error %}
+        <p style="color:red;">Ошибка: {{ error }}</p>
+    {% elif temperature %}
+        <p>Температура: {{ temperature }}°C</p>
+        <p>Ветер: {{ wind_speed }} км/ч</p>
+        <p>Время: {{ local_time }}</p>
+    {% else %}
+        <p>Данные недоступны.</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Назад</a>
+</body>
+</html>

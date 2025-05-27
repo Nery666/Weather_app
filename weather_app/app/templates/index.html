@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+</head>
+<body>
+    <h1>Введите город</h1>
+    <form action="/weather" method="get">
+        <input type="text" name="city" required>
+        <button type="submit">Узнать погоду</button>
+    </form>
+
+    {% if last_city %}
+        <p>Последний выбранный город: 
+            <a href="/weather?city={{ last_city | urlencode }}">{{ last_city }}</a>
+        </p>
+    {% endif %}
+
+</body>
+</html>
